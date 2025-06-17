@@ -39,15 +39,13 @@
 
         #i {
             width: 640px;
-            height: 38%;
+            height: 80%;
             -webkit-transform-origin: 0 0;
             border: none;
         }
     </style>
 </head>
 <body>
-    <div id="t">Doom</div>
-    <div id="st">The original game from 1993</div>
     <div id="c">
         <iframe
             id="i"
@@ -60,9 +58,6 @@
         var h = 400;
 
         window.onresize = function () {
-            var isLandscape = window.innerWidth > window.innerHeight;
-            document.getElementById('t').style.display = isLandscape ? 'none' : '';
-            document.getElementById('st').style.display = isLandscape ? 'none' : '';
             window.scrollTo(0, 0);
             var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
             iframe.style.webkitTransform = 'scale(' + scale + ')';
